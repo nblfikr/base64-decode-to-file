@@ -1,11 +1,19 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'base64-decode-to-file'
+description: 'This action will help you decode a base64 string to a file'
+author: 'nblfikr'
 inputs:
-  milliseconds: # change this
+  filename:
+    required: true
+    description: 'specify the filename'
+  base64:
     required: true
     description: 'input description here'
-    default: 'default value if applicable'
+outputs:
+  fullpath:
+    description: 'The result of this action'
 runs:
   using: 'node16'
   main: 'dist/index.js'
+branding:
+  icon: 'unlock'
+  color: 'green'
